@@ -1,50 +1,88 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9046" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9046" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="HTV-AC-7fz">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9035"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9046"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Zhihu News Table View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="zFe-p5-6ec">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="zhihuNewsTableViewController" customModule="izhihu" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="UITableView">
+                <tableViewController id="HTV-AC-7fz" customClass="zhihuNewsTableViewController" customModule="izhihu" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="white" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="86" sectionHeaderHeight="18" sectionFooterHeight="18" id="y6k-s1-Rxw">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="newsCell" selectionStyle="default" indentationWidth="10" textLabel="1VJ-8H-xKz" detailTextLabel="KfA-VM-IgP" style="IBUITableViewCellStyleSubtitle" translatesAutoresizingMaskIntoConstraints="NO" id="uwE-uS-fMO">
-                                <rect key="frame" x="121" y="0.0" width="320" height="44"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uwE-uS-fMO" id="7Vw-x3-azr">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsCell" rowHeight="86" id="IfF-1m-OfO" customClass="StoryViewCell" customModule="izhihu" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="600" height="86"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IfF-1m-OfO" id="154-sA-arN">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="85"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1VJ-8H-xKz">
-                                            <rect key="frame" x="15" y="1" width="34" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KfA-VM-IgP">
-                                            <rect key="frame" x="15" y="22" width="59" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eww-zo-Yhx">
+                                            <rect key="frame" x="84" y="16" width="500" height="60"/>
+                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                        <imageView userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wub-Uz-wpE">
+                                            <rect key="frame" x="16" y="16" width="60" height="60"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="60" id="0ZZ-m1-q7O"/>
+                                                <constraint firstAttribute="width" constant="77" id="0zc-V7-Vdi"/>
+                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="5XB-Kf-X1K"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="66f-Hf-Y2w"/>
+                                                <constraint firstAttribute="height" constant="98" id="CgZ-6Z-yLr"/>
+                                                <constraint firstAttribute="width" constant="77" id="PIv-TZ-EZp"/>
+                                                <constraint firstAttribute="width" constant="77" id="Tjv-Sy-YWv"/>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="gMd-ck-d0K"/>
+                                                <constraint firstAttribute="width" constant="60" id="jfd-kI-INg"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="kdf-uj-VpB"/>
+                                                <constraint firstAttribute="height" constant="98" id="l0c-fR-EL6"/>
+                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="qbK-SI-YC4"/>
+                                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="60" id="xNp-It-8fJ"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="0ZZ-m1-q7O"/>
+                                                    <exclude reference="0zc-V7-Vdi"/>
+                                                    <exclude reference="5XB-Kf-X1K"/>
+                                                    <exclude reference="CgZ-6Z-yLr"/>
+                                                    <exclude reference="PIv-TZ-EZp"/>
+                                                    <exclude reference="Tjv-Sy-YWv"/>
+                                                    <exclude reference="jfd-kI-INg"/>
+                                                    <exclude reference="kdf-uj-VpB"/>
+                                                    <exclude reference="l0c-fR-EL6"/>
+                                                </mask>
+                                            </variation>
+                                        </imageView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="wub-Uz-wpE" firstAttribute="leading" secondItem="154-sA-arN" secondAttribute="leadingMargin" constant="8" id="4E0-4o-zyd"/>
+                                        <constraint firstItem="Eww-zo-Yhx" firstAttribute="leading" secondItem="wub-Uz-wpE" secondAttribute="trailing" constant="8" symbolic="YES" id="6BQ-Jh-cGV"/>
+                                        <constraint firstItem="wub-Uz-wpE" firstAttribute="top" secondItem="154-sA-arN" secondAttribute="topMargin" constant="8" id="7UH-O2-tjP"/>
+                                        <constraint firstItem="wub-Uz-wpE" firstAttribute="bottom" secondItem="Eww-zo-Yhx" secondAttribute="bottom" id="JI1-d3-A67"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Eww-zo-Yhx" secondAttribute="trailing" constant="8" id="r6r-On-APA"/>
+                                        <constraint firstItem="wub-Uz-wpE" firstAttribute="top" secondItem="Eww-zo-Yhx" secondAttribute="top" id="szH-z7-2P4"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="storyImage" destination="wub-Uz-wpE" id="aKF-Fn-9ds"/>
+                                    <outlet property="storyTitle" destination="Eww-zo-Yhx" id="6Bm-5W-G6Q"/>
+                                </connections>
                             </tableViewCell>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="HTV-AC-7fz" id="lmX-vD-6gJ"/>
+                            <outlet property="delegate" destination="HTV-AC-7fz" id="KNN-Lg-fuR"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7tn-hW-KPu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="452" y="164"/>
         </scene>
     </scenes>
 </document>

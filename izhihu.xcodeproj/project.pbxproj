@@ -16,6 +16,7 @@
 		43F33FAB1BE1A62700AD6AF9 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 43F33F801BE1A5FE00AD6AF9 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		43F33FAF1BE1A6DE00AD6AF9 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F33FAE1BE1A6DD00AD6AF9 /* SwiftyJSON.swift */; };
 		43F33FB31BE1A9A200AD6AF9 /* zhihuNewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F33FB21BE1A9A200AD6AF9 /* zhihuNewsTableViewController.swift */; };
+		43F33FBD1BE1C47200AD6AF9 /* StoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F33FBC1BE1C47200AD6AF9 /* StoryViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		43F33F751BE1A5FE00AD6AF9 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = library/Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		43F33FAE1BE1A6DD00AD6AF9 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = library/SwiftyJSON/Source/SwiftyJSON.swift; sourceTree = "<group>"; };
 		43F33FB21BE1A9A200AD6AF9 /* zhihuNewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = zhihuNewsTableViewController.swift; sourceTree = "<group>"; };
+		43F33FBC1BE1C47200AD6AF9 /* StoryViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoryViewCell.swift; path = ../StoryViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 		43F33F5D1BE1A59A00AD6AF9 /* izhihu */ = {
 			isa = PBXGroup;
 			children = (
+				43F33FBC1BE1C47200AD6AF9 /* StoryViewCell.swift */,
 				43F33FAE1BE1A6DD00AD6AF9 /* SwiftyJSON.swift */,
 				43F33F751BE1A5FE00AD6AF9 /* Alamofire.xcodeproj */,
 				43F33F5E1BE1A59A00AD6AF9 /* AppDelegate.swift */,
@@ -190,6 +193,7 @@
 		43F33F531BE1A59A00AD6AF9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = swift;
 				TargetAttributes = {
@@ -293,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43F33F5F1BE1A59A00AD6AF9 /* AppDelegate.swift in Sources */,
+				43F33FBD1BE1C47200AD6AF9 /* StoryViewCell.swift in Sources */,
 				43F33FB31BE1A9A200AD6AF9 /* zhihuNewsTableViewController.swift in Sources */,
 				43F33F671BE1A59A00AD6AF9 /* izhihu.xcdatamodeld in Sources */,
 				43F33FAF1BE1A6DE00AD6AF9 /* SwiftyJSON.swift in Sources */,
@@ -418,6 +423,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = izhihu/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = chensb.izhihu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -430,6 +436,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = izhihu/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = chensb.izhihu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -455,6 +462,7 @@
 				43F33F721BE1A59A00AD6AF9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

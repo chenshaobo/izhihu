@@ -11,18 +11,27 @@ import Alamofire
 
 class zhihuNewsTableViewController: UITableViewController {
     let newsLatest = "http://news-at.zhihu.com/api/4/news/latest"
-    var news = [JSON]()
-    convenience init(){
-        self.init()
-        Alamofire.request(.GET, newsLatest)
-            .responseJSON { response in
-                print(response)
-        }
-    }
+    var news = [Story]()
+ 
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+       // dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)){
+            
+            Alamofire.request(.GET, newsLatest)
+                .responseJSON { response in
+                    let json = JSON(response.result.value!)
+                    for (_,storyJSON):(String,JSON) in json["stories"]{
+                        print("\(storyJSON)")
+                        let story = Story(id : storyJSON["id"].string,title : storyJSON["title"].string, imageUrl : storyJSON["images",0].string)
+                        self.news.append(story)
+                    }
+                    print("json\(self.news[0])")
+                    print("count :\(self.news.count)")
+                    self.tableView!.reloadData()
+            }
+        //}
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -50,11 +59,11 @@ class zhihuNewsTableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("newsCell", forIndexPath: indexPath)
-        cell.textLabel?.text = news[indexPath.row].string
-        
-        // Configure the cell...
+        let cell = tableView.dequeueReusableCellWithIdentifier("newsCell", forIndexPath: indexPath) as! StoryViewCell
+        let story = news[indexPath.row]
 
+        cell.story = story
+        // Configure the cell...
         return cell
     }
 
