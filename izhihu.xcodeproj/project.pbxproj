@@ -18,10 +18,10 @@
 		43F33FC81BE224A000AD6AF9 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F33FC71BE224A000AD6AF9 /* ImageLoader.swift */; };
 		43FF28161BE30DCE009A1165 /* zhihuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FF28141BE30DCE009A1165 /* zhihuTableViewCell.swift */; };
 		43FF28171BE30DCE009A1165 /* zhihuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43FF28151BE30DCE009A1165 /* zhihuTableViewCell.xib */; };
-		43FF28201BE31459009A1165 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FF281F1BE31459009A1165 /* SwiftyJSON.swift */; };
 		43FF28251BE317B3009A1165 /* zhihuNewsDetailControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FF28241BE317B3009A1165 /* zhihuNewsDetailControllerViewController.swift */; };
 		43FF28311BE34950009A1165 /* welcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FF28301BE34950009A1165 /* welcomeViewController.swift */; };
 		43FF28331BE34A02009A1165 /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FF28321BE34A02009A1165 /* utils.swift */; };
+		43FF283C1BE36FFA009A1165 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FF283B1BE36FFA009A1165 /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,10 +110,10 @@
 		43F33FC71BE224A000AD6AF9 /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		43FF28141BE30DCE009A1165 /* zhihuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = zhihuTableViewCell.swift; sourceTree = "<group>"; };
 		43FF28151BE30DCE009A1165 /* zhihuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = zhihuTableViewCell.xib; sourceTree = "<group>"; };
-		43FF281F1BE31459009A1165 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = library/Alamofire/SwiftyJSON.swift; sourceTree = "<group>"; };
 		43FF28241BE317B3009A1165 /* zhihuNewsDetailControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = zhihuNewsDetailControllerViewController.swift; sourceTree = "<group>"; };
 		43FF28301BE34950009A1165 /* welcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = welcomeViewController.swift; sourceTree = "<group>"; };
 		43FF28321BE34A02009A1165 /* utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
+		43FF283B1BE36FFA009A1165 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = library/SwiftyJSON/Source/SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +131,7 @@
 		43F33F521BE1A59A00AD6AF9 = {
 			isa = PBXGroup;
 			children = (
-				43F33F5D1BE1A59A00AD6AF9 /* izhihu */,
+				43F33F5D1BE1A59A00AD6AF9 /* 	 */,
 				43F33F5C1BE1A59A00AD6AF9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -144,7 +144,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		43F33F5D1BE1A59A00AD6AF9 /* izhihu */ = {
+		43F33F5D1BE1A59A00AD6AF9 /* 	 */ = {
 			isa = PBXGroup;
 			children = (
 				43FF281C1BE3143F009A1165 /* library */,
@@ -158,6 +158,7 @@
 				43F33F651BE1A59A00AD6AF9 /* izhihu.xcdatamodeld */,
 				43FF28321BE34A02009A1165 /* utils.swift */,
 			);
+			name = "	";
 			path = izhihu;
 			sourceTree = "<group>";
 		};
@@ -197,8 +198,8 @@
 		43FF281C1BE3143F009A1165 /* library */ = {
 			isa = PBXGroup;
 			children = (
+				43FF283B1BE36FFA009A1165 /* SwiftyJSON.swift */,
 				43F33FC71BE224A000AD6AF9 /* ImageLoader.swift */,
-				43FF281F1BE31459009A1165 /* SwiftyJSON.swift */,
 				43F33F751BE1A5FE00AD6AF9 /* Alamofire.xcodeproj */,
 			);
 			name = library;
@@ -342,9 +343,9 @@
 				43FF28311BE34950009A1165 /* welcomeViewController.swift in Sources */,
 				43FF28161BE30DCE009A1165 /* zhihuTableViewCell.swift in Sources */,
 				43FF28331BE34A02009A1165 /* utils.swift in Sources */,
+				43FF283C1BE36FFA009A1165 /* SwiftyJSON.swift in Sources */,
 				43F33FB31BE1A9A200AD6AF9 /* zhihuNewsTableViewController.swift in Sources */,
 				43F33F671BE1A59A00AD6AF9 /* izhihu.xcdatamodeld in Sources */,
-				43FF28201BE31459009A1165 /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
