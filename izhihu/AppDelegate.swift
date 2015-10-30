@@ -14,9 +14,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        let navController = self.window?.rootViewController as? UINavigationController
+            print("coutn\(navController?.viewControllers.count)")
+        
+        let rightController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("topicView") as! zhihuNewsTableViewController
+        
+        navController?.pushViewController(rightController, animated: true)
+        print("init welcome")
+        self.window?.rootViewController = welcomeViewController.getWelcomViewController(navController!)
+
         return true
     }
 

@@ -8,15 +8,14 @@
 
 import UIKit
 struct Story {
-    init(id:String?,title:String?,imageUrl:String?){
+    init(id:Int?,title:String?,imageUrl:String?){
         self.id = id
         self.title = title
         self.imageUrl = imageUrl
     }
-    let id:String?
+    let id:Int?
     let title :String?
     let imageUrl: String?
-    var imageData : NSData?
 }
 class StoryViewCell: UITableViewCell {
 
@@ -25,45 +24,35 @@ class StoryViewCell: UITableViewCell {
             update()
         }
     }
-    @IBOutlet weak var storyTitle: UITextView!
+//    init(){
+//    
+//    }
+    @IBOutlet weak var storyTitle: UILabel!
     @IBOutlet weak var storyImage: UIImageView!
     var id:String?
-    override func awakeFromNib() {
-       
-        super.awakeFromNib()
-        // Initialization code
-    }
-    
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
-    }
     func update(){
         print("UPDAT:\(story)")
         self.storyTitle!.text = story!.title
-//        if ((self.storyTitle!.text = story!.title) != nil) {}
-
-        if let data = story!.imageData {
-                print("set image data")
-                self.storyImage.image = UIImage( data: data)
-        }else{
             if let imageUrl = story?.imageUrl {
-            if let url = NSURL(string: (imageUrl)) {
+
             dispatch_async(dispatch_get_main_queue()){
-                NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: { (data, _, error) -> Void in
-                    guard let data = data where error == nil else { return }
-//                    print("get data ok :\(url)\n\(data)")
-//                    self.story!.imageData = data
-                    self.storyImage.image = UIImage(data:data)
-                }).resume()
-            }
+                ImageLoader.sharedLoader.imageForUrl(imageUrl, completionHandler:{(image: UIImage?, url: String) in
+                    print("size\(image?.size)")
+                    self.storyImage.image = image
+                    print("\(self.storyImage.sizeThatFits(CGSize(width:48,height:48 )))")
+                    //self.storyImage.frame = CGRectMake(0, 0, 48.0, 48.0)
+                    self.storyImage.layer.cornerRadius = self.storyImage.frame.size.width / 2
+                })
+//                NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: { (data, _, error) -> Void in
+//                    guard let data = data where error == nil else { return }
+////                    print("get data ok :\(url)\n\(data)")
+////                    self.story!.imageData = data
+//                    self.storyImage.image = UIImage(data:data)
+//                }).resume()
             }
            }
-        }
     }
-    
-    
 }
 
 

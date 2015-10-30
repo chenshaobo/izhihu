@@ -14,9 +14,14 @@
 		43F33F6C1BE1A59A00AD6AF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43F33F6A1BE1A59A00AD6AF9 /* LaunchScreen.storyboard */; };
 		43F33FAA1BE1A62700AD6AF9 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43F33F801BE1A5FE00AD6AF9 /* Alamofire.framework */; };
 		43F33FAB1BE1A62700AD6AF9 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 43F33F801BE1A5FE00AD6AF9 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		43F33FAF1BE1A6DE00AD6AF9 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F33FAE1BE1A6DD00AD6AF9 /* SwiftyJSON.swift */; };
 		43F33FB31BE1A9A200AD6AF9 /* zhihuNewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F33FB21BE1A9A200AD6AF9 /* zhihuNewsTableViewController.swift */; };
-		43F33FBD1BE1C47200AD6AF9 /* StoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F33FBC1BE1C47200AD6AF9 /* StoryViewCell.swift */; };
+		43F33FC81BE224A000AD6AF9 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F33FC71BE224A000AD6AF9 /* ImageLoader.swift */; };
+		43FF28161BE30DCE009A1165 /* zhihuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FF28141BE30DCE009A1165 /* zhihuTableViewCell.swift */; };
+		43FF28171BE30DCE009A1165 /* zhihuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43FF28151BE30DCE009A1165 /* zhihuTableViewCell.xib */; };
+		43FF28201BE31459009A1165 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FF281F1BE31459009A1165 /* SwiftyJSON.swift */; };
+		43FF28251BE317B3009A1165 /* zhihuNewsDetailControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FF28241BE317B3009A1165 /* zhihuNewsDetailControllerViewController.swift */; };
+		43FF28311BE34950009A1165 /* welcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FF28301BE34950009A1165 /* welcomeViewController.swift */; };
+		43FF28331BE34A02009A1165 /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FF28321BE34A02009A1165 /* utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,9 +106,14 @@
 		43F33F6B1BE1A59A00AD6AF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43F33F6D1BE1A59A00AD6AF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43F33F751BE1A5FE00AD6AF9 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = library/Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
-		43F33FAE1BE1A6DD00AD6AF9 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = library/SwiftyJSON/Source/SwiftyJSON.swift; sourceTree = "<group>"; };
 		43F33FB21BE1A9A200AD6AF9 /* zhihuNewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = zhihuNewsTableViewController.swift; sourceTree = "<group>"; };
-		43F33FBC1BE1C47200AD6AF9 /* StoryViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoryViewCell.swift; path = ../StoryViewCell.swift; sourceTree = "<group>"; };
+		43F33FC71BE224A000AD6AF9 /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		43FF28141BE30DCE009A1165 /* zhihuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = zhihuTableViewCell.swift; sourceTree = "<group>"; };
+		43FF28151BE30DCE009A1165 /* zhihuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = zhihuTableViewCell.xib; sourceTree = "<group>"; };
+		43FF281F1BE31459009A1165 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = library/Alamofire/SwiftyJSON.swift; sourceTree = "<group>"; };
+		43FF28241BE317B3009A1165 /* zhihuNewsDetailControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = zhihuNewsDetailControllerViewController.swift; sourceTree = "<group>"; };
+		43FF28301BE34950009A1165 /* welcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = welcomeViewController.swift; sourceTree = "<group>"; };
+		43FF28321BE34A02009A1165 /* utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,16 +147,16 @@
 		43F33F5D1BE1A59A00AD6AF9 /* izhihu */ = {
 			isa = PBXGroup;
 			children = (
-				43F33FBC1BE1C47200AD6AF9 /* StoryViewCell.swift */,
-				43F33FAE1BE1A6DD00AD6AF9 /* SwiftyJSON.swift */,
-				43F33F751BE1A5FE00AD6AF9 /* Alamofire.xcodeproj */,
+				43FF281C1BE3143F009A1165 /* library */,
+				43FF281B1BE31417009A1165 /* controller */,
+				43FF281A1BE31406009A1165 /* view */,
 				43F33F5E1BE1A59A00AD6AF9 /* AppDelegate.swift */,
 				43F33F621BE1A59A00AD6AF9 /* Main.storyboard */,
 				43F33F681BE1A59A00AD6AF9 /* Assets.xcassets */,
 				43F33F6A1BE1A59A00AD6AF9 /* LaunchScreen.storyboard */,
 				43F33F6D1BE1A59A00AD6AF9 /* Info.plist */,
 				43F33F651BE1A59A00AD6AF9 /* izhihu.xcdatamodeld */,
-				43F33FB21BE1A9A200AD6AF9 /* zhihuNewsTableViewController.swift */,
+				43FF28321BE34A02009A1165 /* utils.swift */,
 			);
 			path = izhihu;
 			sourceTree = "<group>";
@@ -163,6 +173,35 @@
 				43F33F8C1BE1A5FE00AD6AF9 /* Alamofire.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		43FF281A1BE31406009A1165 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				43FF28151BE30DCE009A1165 /* zhihuTableViewCell.xib */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		43FF281B1BE31417009A1165 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				43F33FB21BE1A9A200AD6AF9 /* zhihuNewsTableViewController.swift */,
+				43FF28141BE30DCE009A1165 /* zhihuTableViewCell.swift */,
+				43FF28241BE317B3009A1165 /* zhihuNewsDetailControllerViewController.swift */,
+				43FF28301BE34950009A1165 /* welcomeViewController.swift */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		43FF281C1BE3143F009A1165 /* library */ = {
+			isa = PBXGroup;
+			children = (
+				43F33FC71BE224A000AD6AF9 /* ImageLoader.swift */,
+				43FF281F1BE31459009A1165 /* SwiftyJSON.swift */,
+				43F33F751BE1A5FE00AD6AF9 /* Alamofire.xcodeproj */,
+			);
+			name = library;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43F33F6C1BE1A59A00AD6AF9 /* LaunchScreen.storyboard in Resources */,
+				43FF28171BE30DCE009A1165 /* zhihuTableViewCell.xib in Resources */,
 				43F33F691BE1A59A00AD6AF9 /* Assets.xcassets in Resources */,
 				43F33F641BE1A59A00AD6AF9 /* Main.storyboard in Resources */,
 			);
@@ -297,10 +337,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				43F33F5F1BE1A59A00AD6AF9 /* AppDelegate.swift in Sources */,
-				43F33FBD1BE1C47200AD6AF9 /* StoryViewCell.swift in Sources */,
+				43FF28251BE317B3009A1165 /* zhihuNewsDetailControllerViewController.swift in Sources */,
+				43F33FC81BE224A000AD6AF9 /* ImageLoader.swift in Sources */,
+				43FF28311BE34950009A1165 /* welcomeViewController.swift in Sources */,
+				43FF28161BE30DCE009A1165 /* zhihuTableViewCell.swift in Sources */,
+				43FF28331BE34A02009A1165 /* utils.swift in Sources */,
 				43F33FB31BE1A9A200AD6AF9 /* zhihuNewsTableViewController.swift in Sources */,
 				43F33F671BE1A59A00AD6AF9 /* izhihu.xcdatamodeld in Sources */,
-				43F33FAF1BE1A6DE00AD6AF9 /* SwiftyJSON.swift in Sources */,
+				43FF28201BE31459009A1165 /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

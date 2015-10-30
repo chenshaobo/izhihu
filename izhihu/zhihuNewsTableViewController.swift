@@ -17,27 +17,25 @@ class zhihuNewsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-       // dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)){
+        //auto calc size
+        self.tableView.estimatedRowHeight = self.tableView.rowHeight        
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        
+      
             
             Alamofire.request(.GET, newsLatest)
                 .responseJSON { response in
                     let json = JSON(response.result.value!)
                     for (_,storyJSON):(String,JSON) in json["stories"]{
                         print("\(storyJSON)")
-                        let story = Story(id : storyJSON["id"].string,title : storyJSON["title"].string, imageUrl : storyJSON["images",0].string)
+                        let story = Story(id : storyJSON["id"].int,title : storyJSON["title"].string, imageUrl : storyJSON["images",0].string)
                         self.news.append(story)
                     }
                     print("json\(self.news[0])")
                     print("count :\(self.news.count)")
                     self.tableView!.reloadData()
             }
-        //}
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,7 +57,7 @@ class zhihuNewsTableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("newsCell", forIndexPath: indexPath) as! StoryViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("newsCell", forIndexPath: indexPath) as! zhihuTableViewCell
         let story = news[indexPath.row]
 
         cell.story = story

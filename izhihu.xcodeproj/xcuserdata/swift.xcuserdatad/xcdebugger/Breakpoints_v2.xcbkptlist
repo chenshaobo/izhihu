@@ -23,13 +23,29 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "izhihu/zhihuNewsTableViewController.swift"
-            timestampString = "467803972.474238"
+            filePath = "izhihu/ImageLoader.swift"
+            timestampString = "467806881.559747"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "Static"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "izhihu/welcomeViewController.swift"
+            timestampString = "467889529.525224"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "displayWelcomImg()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
