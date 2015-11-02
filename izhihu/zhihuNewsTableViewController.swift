@@ -27,7 +27,7 @@ class zhihuNewsTableViewController: UITableViewController {
                 .responseJSON { response in
                     let json = JSON(response.result.value!)
                     for (_,storyJSON):(String,JSON) in json["stories"]{
-                        print("\(storyJSON)")
+                        //print("\(storyJSON)")
                         let story = Story(id : storyJSON["id"].int,title : storyJSON["title"].string, imageUrl : storyJSON["images",0].string)
                         self.news.append(story)
                     }

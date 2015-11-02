@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 class welcomeViewController: UIViewController {
     
+    @IBOutlet weak var ownerLabel: UILabel!
     @IBOutlet weak var welcomeImg: UIImageView!
     var navController: UINavigationController!
     
@@ -52,9 +53,12 @@ class welcomeViewController: UIViewController {
                 .responseJSON { response in
                     let json = JSON(response.result.value!)
                     let imageUrl = json["img"].string
+                    let ownerStr = json["text"].string
+                     self.ownerLabel.text = ownerStr!
                     ImageLoader.sharedLoader.imageForUrl(imageUrl!, completionHandler:{(image: UIImage?, url: String) in
-                        print("size\(image!)")
+                        print("size\(image!) string \(ownerStr)")
                          self.welcomeImg.image = image!
+                       
                     })
             }
             

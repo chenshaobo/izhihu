@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9035"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -24,10 +23,10 @@
             </objects>
             <point key="canvasLocation" x="-1021" y="-135"/>
         </scene>
-        <!--showDetail-->
+        <!--详情-->
         <scene sceneID="Hyp-kc-3nf">
             <objects>
-                <viewController restorationIdentifier="showdetail" storyboardIdentifier="showdetail" title="showDetail" modalPresentationStyle="pageSheet" hidesBottomBarWhenPushed="YES" id="wVB-eu-KuE" customClass="zhihuNewsDetailControllerViewController" customModule="izhihu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="showdetail" storyboardIdentifier="showdetail" title="详情" modalPresentationStyle="pageSheet" hidesBottomBarWhenPushed="YES" id="wVB-eu-KuE" customClass="zhihuNewsDetailControllerViewController" customModule="izhihu" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Zgl-kV-b3k"/>
                         <viewControllerLayoutGuide type="bottom" id="mB6-sx-jOs"/>
@@ -99,10 +98,10 @@
             </objects>
             <point key="canvasLocation" x="1759" y="-129"/>
         </scene>
-        <!--Welcome View Controller-->
+        <!--欢迎-->
         <scene sceneID="7KJ-p9-1gT">
             <objects>
-                <viewController restorationIdentifier="welcome" storyboardIdentifier="welcome" id="nZ8-6U-qG1" customClass="welcomeViewController" customModule="izhihu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="welcome" storyboardIdentifier="welcome" title="欢迎" id="nZ8-6U-qG1" customClass="welcomeViewController" customModule="izhihu" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1uI-0w-PTu"/>
                         <viewControllerLayoutGuide type="bottom" id="O1I-Jk-k3U"/>
@@ -111,32 +110,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4VJ-Zb-Rdc">
+                                <rect key="frame" x="442" y="542" width="0.0" height="0.0"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gHu-Od-5WU">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="gHu-Od-5WU" firstAttribute="top" secondItem="1uI-0w-PTu" secondAttribute="bottom" constant="8" symbolic="YES" id="2yp-XZ-Jc0"/>
-                            <constraint firstItem="gHu-Od-5WU" firstAttribute="width" secondItem="XQV-8O-LBd" secondAttribute="height" multiplier="1:1" id="3Kk-6q-aWS"/>
-                            <constraint firstItem="gHu-Od-5WU" firstAttribute="centerY" secondItem="XQV-8O-LBd" secondAttribute="centerY" id="5Vd-Pb-emP"/>
+                            <constraint firstItem="4VJ-Zb-Rdc" firstAttribute="top" secondItem="gHu-Od-5WU" secondAttribute="bottom" constant="-58" id="6nF-LP-frO"/>
                             <constraint firstItem="gHu-Od-5WU" firstAttribute="width" secondItem="XQV-8O-LBd" secondAttribute="width" id="BrF-xl-9ZC"/>
-                            <constraint firstItem="gHu-Od-5WU" firstAttribute="leading" secondItem="XQV-8O-LBd" secondAttribute="leadingMargin" constant="33" id="QaL-0q-5yT"/>
                             <constraint firstItem="gHu-Od-5WU" firstAttribute="top" secondItem="1uI-0w-PTu" secondAttribute="bottom" constant="-20" id="R3O-yG-L60"/>
                             <constraint firstItem="gHu-Od-5WU" firstAttribute="centerX" secondItem="XQV-8O-LBd" secondAttribute="centerX" id="SR8-kw-h5k"/>
+                            <constraint firstItem="4VJ-Zb-Rdc" firstAttribute="leading" secondItem="gHu-Od-5WU" secondAttribute="trailing" constant="-158" id="Ujx-k3-bYC"/>
+                            <constraint firstItem="4VJ-Zb-Rdc" firstAttribute="top" secondItem="gHu-Od-5WU" secondAttribute="bottom" constant="-58" id="WgD-C1-Yxd"/>
                             <constraint firstItem="gHu-Od-5WU" firstAttribute="height" secondItem="XQV-8O-LBd" secondAttribute="height" id="f1P-4r-HBf"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="2yp-XZ-Jc0"/>
-                                <exclude reference="3Kk-6q-aWS"/>
-                                <exclude reference="5Vd-Pb-emP"/>
-                                <exclude reference="QaL-0q-5yT"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="bnn-l3-ORD"/>
                     <connections>
+                        <outlet property="ownerLabel" destination="4VJ-Zb-Rdc" id="WIn-1K-qrK"/>
                         <outlet property="welcomeImg" destination="gHu-Od-5WU" id="y3e-BG-8fw"/>
                     </connections>
                 </viewController>
@@ -144,10 +144,10 @@
             </objects>
             <point key="canvasLocation" x="7" y="-135"/>
         </scene>
-        <!--izhihu topic-->
+        <!--首页-->
         <scene sceneID="zFe-p5-6ec">
             <objects>
-                <tableViewController storyboardIdentifier="topicView" id="HTV-AC-7fz" customClass="zhihuNewsTableViewController" customModule="izhihu" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="topicView" title="首页" id="HTV-AC-7fz" customClass="zhihuNewsTableViewController" customModule="izhihu" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="white" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="82" sectionHeaderHeight="18" sectionFooterHeight="18" id="y6k-s1-Rxw">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -204,17 +204,11 @@
                         </prototypes>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="izhihu topic" id="OW3-wx-QcT">
-                        <barButtonItem key="backBarButtonItem" title="return" id="50V-rC-9ih"/>
-                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="4oy-fn-gF0">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7tn-hW-KPu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="883" y="-129"/>
+            <point key="canvasLocation" x="757" y="-109"/>
         </scene>
     </scenes>
 </document>

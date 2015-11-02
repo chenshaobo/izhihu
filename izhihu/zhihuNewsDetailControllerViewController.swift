@@ -11,6 +11,7 @@ import Alamofire
 class zhihuNewsDetailControllerViewController: UIViewController {
 
     @IBOutlet weak var newsDetailWebview: UIWebView!
+    @IBOutlet weak var likeCountItem: UINavigationItem!
     var  id : Int!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +25,7 @@ class zhihuNewsDetailControllerViewController: UIViewController {
                     css = "<link href='\(cssJson)' rel='stylesheet' type='text/css' />\(css)"
                 }
                 let newBody = "\(css) <style> .headline .img-place-holder { height: 200px;}</style> \(body!)"
-                print("\(newBody)")
+                //print("\(newBody)")
                 self.newsDetailWebview.loadHTMLString(newBody,baseURL:nil)
         }
 
