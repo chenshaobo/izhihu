@@ -18,8 +18,9 @@ class zhihuNewsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //auto calc size
-//        self.tableView.estimatedRowHeight = self.tableView.rowHeight        
-//        self.tableView.r	owHeight = UITableViewAutomaticDimension
+//        self.tableView.estimatedRowHeight = self.tableView.rowHeight
+        //self.tableView.estimatedRowHeight = self.tableView.rowHeight
+       // self.tableView.rowHeight = UITableViewAutomaticDimension
         
       
             
@@ -27,7 +28,7 @@ class zhihuNewsTableViewController: UITableViewController {
                 .responseJSON { response in
                     let json = JSON(response.result.value!)
                     for (_,storyJSON):(String,JSON) in json["stories"]{
-                        //print("\(storyJSON)")
+                        print("\(storyJSON)")
                         let story = Story(id : storyJSON["id"].int,title : storyJSON["title"].string, imageUrl : storyJSON["images",0].string)
                         self.news.append(story)
                     }
