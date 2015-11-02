@@ -7,11 +7,26 @@
 //
 
 import UIKit
-
+import Alamofire
 class zhihuNewsDetailControllerViewController: UIViewController {
 
+    @IBOutlet weak var newsDetailWebview: UIWebView!
+    var  id : Int!
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("detail id : \(id)")
+        Alamofire.request(.GET, "http://news-at.zhihu.com/api/4/news/" + "\(id)" )
+            .responseJSON { response in
+                let json = JSON(response.result.value!)
+                let body = json["body"].string
+                var css = ""
+                for (_,cssJson) in json["css"] {
+                    css = "<link href='\(cssJson)' rel='stylesheet' type='text/css' />\(css)"
+                }
+                let newBody = "\(css) <style> .headline .img-place-holder { height: 200px;}</style> \(body!)"
+                print("\(newBody)")
+                self.newsDetailWebview.loadHTMLString(newBody,baseURL:nil)
+        }
 
         // Do any additional setup after loading the view.
     }
@@ -20,16 +35,5 @@ class zhihuNewsDetailControllerViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

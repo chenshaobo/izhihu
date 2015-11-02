@@ -18,8 +18,8 @@ class zhihuNewsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //auto calc size
-        self.tableView.estimatedRowHeight = self.tableView.rowHeight        
-        self.tableView.rowHeight = UITableViewAutomaticDimension
+//        self.tableView.estimatedRowHeight = self.tableView.rowHeight        
+//        self.tableView.r	owHeight = UITableViewAutomaticDimension
         
       
             
@@ -110,5 +110,21 @@ class zhihuNewsTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    /*
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation*/
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        //         Get the new view controller using segue.destinationViewController.
+        //         Pass the selected object to the new view controller.
+        print("prepare for segue"   )
+        if let cell = sender as? zhihuTableViewCell  {
+            let vc = segue.destinationViewController as! zhihuNewsDetailControllerViewController
+            vc.id = cell.story?.id
+        }
+        
+    }
 
 }

@@ -17,7 +17,7 @@ struct Story {
     let id:Int?
     let title :String?
     let imageUrl: String?
-}
+}	
 
 class zhihuTableViewCell: UITableViewCell {
     
@@ -29,7 +29,6 @@ class zhihuTableViewCell: UITableViewCell {
 
     @IBOutlet weak var storyTitle: UILabel!
     @IBOutlet weak var storyImage: UIImageView!
-    var id:String?
     
     func update(){	
         self.storyTitle!.text = story!.title
@@ -42,8 +41,6 @@ class zhihuTableViewCell: UITableViewCell {
                 })
             }
         }
-
-    
-}
+    }
 }
 
