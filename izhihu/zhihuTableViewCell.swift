@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Alamofire
 struct Story {
     init(id:Int?,title:String?,imageUrl:String?){
         self.id = id
@@ -27,9 +27,12 @@ class zhihuTableViewCell: UITableViewCell {
         }
     }
 
+    @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var storyTitle: UILabel!
     @IBOutlet weak var storyImage: UIImageView!
     
+    @IBOutlet weak var commentCount: UILabel!
+    @IBOutlet weak var popularityCount: UILabel!
     func update(){	
         self.storyTitle!.text = story!.title
         if let imageUrl = story?.imageUrl {
@@ -41,6 +44,28 @@ class zhihuTableViewCell: UITableViewCell {
                 })
             }
         }
+        let url = NEWS_EXTRA_INFO + "\(self.story!.id!)"
+        Alamofire.request(.GET, url )
+            .responseJSON { response in
+                //print("\(response)")
+                let json = JSON(response.result.value!)
+            
+                let popularity = json["popularity"].int
+                self.popularityCount.text = "\(popularity!)"
+                let commentCount = json["comments"].int
+                self.commentCount.text =  "\(commentCount!)"
+        }
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+    
+    override func setSelected(selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        
+        // Configure the view for the selected state
     }
 }
 

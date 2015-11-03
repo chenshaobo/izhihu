@@ -19,12 +19,14 @@ class zhihuNewsDetailControllerViewController: UIViewController {
         Alamofire.request(.GET, "http://news-at.zhihu.com/api/4/news/" + "\(id)" )
             .responseJSON { response in
                 let json = JSON(response.result.value!)
+                //print("\(json)"	)
                 let body = json["body"].string
                 var css = ""
                 for (_,cssJson) in json["css"] {
                     css = "<link href='\(cssJson)' rel='stylesheet' type='text/css' />\(css)"
                 }
-                let newBody = "\(css) <style> .headline .img-place-holder { height: 200px;}</style> \(body!)"
+                //let newBody = "\(css) <style> .headline .img-place-holder { height: 200px;}</style> \(body!)"
+                let newBody = "\(css) \(body!)"
                 //print("\(newBody)")
                 self.newsDetailWebview.loadHTMLString(newBody,baseURL:nil)
         }

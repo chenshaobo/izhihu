@@ -17,25 +17,26 @@ class zhihuNewsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //auto calc size
-//        self.tableView.estimatedRowHeight = self.tableView.rowHeight
-        //self.tableView.estimatedRowHeight = self.tableView.rowHeight
-       // self.tableView.rowHeight = UITableViewAutomaticDimension
+        let nib = UINib(nibName: "zhihuTableViewCell", bundle: nil)
+        self.tableView.registerNib(nib, forCellReuseIdentifier: "zhihuTableViewCell")
         
-      
-            
+        //auto calc size
+       
+        
             Alamofire.request(.GET, newsLatest)
                 .responseJSON { response in
                     let json = JSON(response.result.value!)
                     for (_,storyJSON):(String,JSON) in json["stories"]{
-                        print("\(storyJSON)")
+                        //print("\(storyJSON)")
                         let story = Story(id : storyJSON["id"].int,title : storyJSON["title"].string, imageUrl : storyJSON["images",0].string)
                         self.news.append(story)
                     }
-                    print("json\(self.news[0])")
+                    //print("json\(self.news[0])")
                     print("count :\(self.news.count)")
                     self.tableView!.reloadData()
             }
+        //self.tableView.estimatedRowHeight = self.tableView.rowHeight
+        //self.tableView.rowHeight = UITableViewAutomaticDimension
 
     }
 
@@ -58,14 +59,28 @@ class zhihuNewsTableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("newsCell", forIndexPath: indexPath) as! zhihuTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("zhihuTableViewCell", forIndexPath: indexPath) as! zhihuTableViewCell
+        
+        
         let story = news[indexPath.row]
-
+        //let cell = zhihuTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "newsCell")
         cell.story = story
         // Configure the cell...
+        
         return cell
     }
-
+    // UITableViewDelegate 方法，处理列表项的选中事件
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    {
+        self.tableView!.deselectRowAtIndexPath(indexPath, animated: true)
+        let cell = tableView.cellForRowAtIndexPath(indexPath) as! zhihuTableViewCell
+        
+        self.performSegueWithIdentifier("showNewsDetail", sender: cell)
+    }
+    
+    override func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+       return UITableViewAutomaticDimension
+    }
 
     /*
     // Override to support conditional editing of the table view.
